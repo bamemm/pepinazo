@@ -24,6 +24,7 @@ public class StepDefs {
 	public void setUpTest() {
 		ChromeOptions opt = new ChromeOptions();
 		opt.addArguments("--disable-notifications");
+		System.setProperty("webdriver.chrome.driver","C:\\libs\\chromedriver.exe");
 		driver = new ChromeDriver(opt);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
